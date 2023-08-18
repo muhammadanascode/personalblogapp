@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 50%;
     height: 50%;
     /* background-color: aqua; */
@@ -8,7 +8,7 @@
     margin-bottom: 20px;
 }
 
-.card{
+.card {
     width: 100%;
     height: 100%;
     padding: 20px;
@@ -16,27 +16,38 @@
     border-radius: 10px;
 }
 
-.child{
+.child {
     display: flex;
     padding: 10px;
-    
+
 }
 
-.img{
+.img {
     border-radius: 5px;
 }
 
-.titlediv{
+.titlediv {
     width: 50%;
     margin-left: 15px;
 }
 
-.datename{
+.datename {
     color: gray;
     font-weight: bold;
     font-size: 15px;
 }
-.blogdescription{
-    color:gray ;
-text-align: justify;
+
+.blogdescription {
+    color: gray;
+    text-align: justify;
+}
+
+.btndiv{
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: rgb(118, 45, 255);
+    color: white;
+    margin-right: 5px;
 }
