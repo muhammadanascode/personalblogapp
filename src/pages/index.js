@@ -5,9 +5,9 @@ import NewBlog from "@/components/NewBlog";
 export default function Home() {
   return (
     <>
-    <Dashboard/>
+    <Dashboard title={"Dashboard"}/>
     <NewBlog/>
-    <Blog/>
+    <Blog title= {"Blogs"} />
     </>
   )
 }
