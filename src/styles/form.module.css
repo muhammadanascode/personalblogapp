@@ -1,0 +1,41 @@
+.container{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    margin-top: 70px;
+}
+.child{
+    width: 50%;
+    height: 80%;
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.child h2{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(47, 0, 135);
+}
+
+.child h4{
+    text-align: center;
+    color: rgb(118, 45, 255);
+    margin-top: 30px;
+}
+.line{
+    color: gray;
+    text-align: center;
+}
+
+.btndiv{
+    width: 30%;
+    margin: auto;
+}
+
+.btn{
+    margin: auto;
+    background-color: rgb(118, 45, 255);
+    color: white;
+}

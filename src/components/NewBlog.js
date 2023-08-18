@@ -9,7 +9,7 @@ const NewBlog = () => {
             </div>
             <div className="mb-3">
                 <textarea placeholder='What is in your mind?' className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                <button type="button" className={`${styles.btn} btn  mt-4`}>Primary</button>
+                <button type="button" className={`${styles.btn} btn  mt-4`}>Add Blog</button>
             </div>
         </div>
     )
