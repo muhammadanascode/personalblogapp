@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function Home({setUserName}) {
 
   const router = useRouter()
+  const [blogs , setBlogs] = useState([])
 
   async function api(){
     const response = await fetch('/api/username',{
@@ -21,6 +22,20 @@ export default function Home({setUserName}) {
     const name = res.firstName + res.lastName
     setUserName(name)
   }
+
+  async function fetchBlogs(){
+    const response = await fetch("/api/readblogs" , {
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({token:localStorage.getItem("token")})
+    } )
+
+    const res = await response.json()
+    console.log(res);
+    setBlogs(res)
+  }
  
   useEffect(() => {
   if(!localStorage.getItem('token')){
@@ -28,6 +43,7 @@ export default function Home({setUserName}) {
   }
   else{
    api()
+   fetchBlogs()
   } 
   }, [])
   
@@ -36,7 +52,7 @@ export default function Home({setUserName}) {
     <>
       <Dashboard title={"Dashboard"} />
       <NewBlog />
-      <Blog title={"Blogs"} />
+      <Blog blogs={blogs} title={"Blogs"} />
     </>
   );
 }

@@ -13,3 +13,9 @@ export function newBlog (email,title,description){
     fs.writeFileSync(filePath, JSON.stringify(data));
     return "Blog Added"
 }
+
+export function readBlog(email){
+    const data = JSON.parse( fs.readFileSync(filePath))
+    const blogs = data.filter((item)=>item.email == email)
+    return blogs
+}
