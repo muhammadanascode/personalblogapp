@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styles from "../styles/NewBlog.module.css"
+import { toast } from 'react-toastify';
+
 
 const NewBlog = () => {
 
@@ -30,6 +32,17 @@ const NewBlog = () => {
 
         setTitle("")
         setDescription("")
+
+        toast.success('New blog added', {
+            position: "top-center",
+            autoClose: 500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
 
     return (

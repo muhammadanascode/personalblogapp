@@ -14,8 +14,8 @@ export default function handler(req, res) {
 
       if (user) {
         // Compare the old password with the stored password (if needed)
-        console.log(user.password , "--" , newpass);
-        console.log(typeof(user.password) , typeof(newpass))
+        // console.log(user.password , "--" , newpass);
+        // console.log(typeof(user.password) , typeof(newpass))
         if (user.password == oldpass) {
           // Update the password
           changePassword(email, newpass);
