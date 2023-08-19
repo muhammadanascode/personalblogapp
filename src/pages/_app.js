@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-export default function App({ session, Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   const [username , setUsername] = useState("")
   function setUserName(name){
     setUsername(name)
@@ -26,7 +26,7 @@ export default function App({ session, Component, pageProps }) {
                 pauseOnHover
                 theme="light"
             />
-        <Component setUserName = {setUserName}  {...pageProps} />
+        <Component username={username} setUserName = {setUserName}  {...pageProps} />
     </>
   )
 }

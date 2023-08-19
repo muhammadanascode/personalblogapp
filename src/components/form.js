@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import styles from '../styles/form.module.css'
+import Link from "next/link";
 
 export default function Form({ signin, onFormSubmit }) {
     const emailRef = useRef();
@@ -22,6 +23,7 @@ export default function Form({ signin, onFormSubmit }) {
             <div className={styles.container}>
                 <div className={styles.child}>
                     <h2>Personal Blogging App</h2>
+                    <Link className={styles.lin} href={signin?"/signup":"/login"}>{signin?"Signup": "Sign in"}</Link>
                     <h4>{signin ? "Sign in " : "Signup"}</h4>
                     <p className={styles.line}>{signin ? "Login in to read blogs" : "SignUp to create your blogs"}</p>
                     <form onSubmit={onSubmitHandler}>

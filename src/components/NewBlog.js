@@ -27,6 +27,9 @@ const NewBlog = () => {
 
         const res = await response.json()
         console.log(res);
+
+        setTitle("")
+        setDescription("")
     }
 
     return (
