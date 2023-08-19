@@ -8,10 +8,13 @@ export default function Form({ signin, onFormSubmit }) {
     const LastNameRef = useRef();
 
     const onSubmitHandler = (e) => {
+        e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        e.preventDefault();
-        onFormSubmit(email, password);
+        const firstName = FirstNameRef.current?.value
+        const lastName = LastNameRef.current?.value
+        
+        signin ? onFormSubmit(email, password) : onFormSubmit(firstName, lastName, email, password);
     };
 
     return (
